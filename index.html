@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Portal | Login</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-logo">🐾</div>
+    <div><h1>Panther Portal</h1><p>CybHER Bug Hunter Lab</p></div>
+  </div>
+  <div class="status-pill">Authorized Classroom Mission</div>
+</header>
+
+<main class="login-page">
+  <section class="login-hero">
+    <div class="eyebrow">CYBHER CYBER MISSION</div>
+    <h2>Welcome,<br>Bug Hunter!</h2>
+    <p>Panther Portal is nearly ready to launch. Explore every page, find the hidden problems, and help improve the portal.</p>
+    <div class="steps">
+      <div class="step"><span>1</span>Log in with the practice account</div>
+      <div class="step"><span>2</span>Test every page and feature</div>
+      <div class="step"><span>3</span>Write clear bug reports</div>
+    </div>
+  </section>
+
+  <section class="login-card">
+    <div class="login-avatar">🕵️</div>
+    <h2>Enter the Mission</h2>
+    <p class="sub">Use the classroom practice account.</p>
+
+    <label for="username">Agent username</label>
+    <div class="input-wrap"><span>👤</span><input id="username" placeholder="student01"></div>
+
+    <label for="password">Secret password</label>
+    <div class="input-wrap"><span>🔐</span><input id="password" type="text" placeholder="Password"></div>
+
+    <button id="loginBtn" class="btn" style="width:100%;margin-top:20px">Start Mission 🚀</button>
+    <div id="loginMessage" class="message"></div>
+
+    <div class="practice">
+      <strong>Practice Login</strong>
+      <div><span>Username</span><code>student01</code></div>
+      <div><span>Password</span><code>panther</code></div>
+    </div>
+  </section>
+</main>
+
+<script>
+document.getElementById("loginBtn").addEventListener("click",()=>{
+  const username=document.getElementById("username").value.trim();
+  const password=document.getElementById("password").value;
+
+  // INTENTIONAL BUG 1:
+  // The password field is visible because type="text" is used.
+
+  // INTENTIONAL BUG 2:
+  // A blank password is accepted for the correct username.
+  if(username==="student01" && (password==="panther" || password==="")){
+    localStorage.setItem("panther_session","active");
+    window.location.href="dashboard.html";
+  }else{
+    document.getElementById("loginMessage").textContent="Mission denied. Check your login details.";
+  }
+});
+</script>
+</body>
+</html>

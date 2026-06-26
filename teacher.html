@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Portal | Teacher Zone</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    <div class="brand-logo">🐾</div>
+    <div><h1>Panther Portal</h1><p>Bug Hunter Mission</p></div>
+  </a>
+  <div class="top-actions">
+    <div class="status-pill">🔎 Mission Active</div>
+    <a href="#" class="logout" data-logout>Log Out</a>
+  </div>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+  <div class="agent">
+    <div class="agent-avatar">🕵️‍♀️</div>
+    <div><strong>Agent Jordan</strong><span>Junior Bug Hunter</span></div>
+  </div>
+  <div class="nav-title">MISSION PAGES</div>
+  <nav class="nav">
+    <a href="dashboard.html" class=""><span>🏠</span>Mission Home</a>
+    <a href="profile.html" class=""><span>👤</span>My Profile</a>
+    <a href="clubs.html" class=""><span>🎨</span>Clubs</a>
+    <a href="assignments.html" class=""><span>📚</span>Assignments</a>
+    <a href="teacher.html" class="teacher active"><span>🔒</span>Teacher Zone</a>
+  </nav>
+  <div class="tip">💡 A strong bug report explains exactly what happened and how to repeat it.</div>
+</aside>
+
+<section class="content">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">RESTRICTED AREA</div>
+    <h2>Teacher Dashboard 🔒</h2>
+    <p>This area should only be available to authorized teachers.</p>
+  </div>
+  <div class="hero-art">🚫</div>
+</section>
+
+<h3 class="section-title">Confidential records</h3>
+<div class="alert">⚠️ Confidential student information</div>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr><th>Student</th><th>Grade</th><th>Private Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Jordan Lee</td><td><span class="grade">82%</span></td><td>Needs extra support with reading.</td></tr>
+      <tr><td>Alex Morgan</td><td><span class="grade">94%</span></td><td>Parent requested a meeting.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</section>
+</main>
+<script src="shared.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>

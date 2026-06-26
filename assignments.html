@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Portal | Assignments</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    <div class="brand-logo">🐾</div>
+    <div><h1>Panther Portal</h1><p>Bug Hunter Mission</p></div>
+  </a>
+  <div class="top-actions">
+    <div class="status-pill">🔎 Mission Active</div>
+    <a href="#" class="logout" data-logout>Log Out</a>
+  </div>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+  <div class="agent">
+    <div class="agent-avatar">🕵️‍♀️</div>
+    <div><strong>Agent Jordan</strong><span>Junior Bug Hunter</span></div>
+  </div>
+  <div class="nav-title">MISSION PAGES</div>
+  <nav class="nav">
+    <a href="dashboard.html" class=""><span>🏠</span>Mission Home</a>
+    <a href="profile.html" class=""><span>👤</span>My Profile</a>
+    <a href="clubs.html" class=""><span>🎨</span>Clubs</a>
+    <a href="assignments.html" class="active"><span>📚</span>Assignments</a>
+    <a href="teacher.html" class="teacher "><span>🔒</span>Teacher Zone</a>
+  </nav>
+  <div class="tip">💡 A strong bug report explains exactly what happened and how to repeat it.</div>
+</aside>
+
+<section class="content">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">CLASSWORK</div>
+    <h2>Assignments 📚</h2>
+    <p>Upload your work and test whether the submission process behaves correctly.</p>
+  </div>
+  <div class="hero-art">📝</div>
+</section>
+
+<h3 class="section-title">Current assignment</h3>
+<article class="card">
+  <div class="assignment-top">
+    <div class="assignment-icon">🛡️</div>
+    <div>
+      <span class="tag">CYBER SAFETY</span>
+      <h3>Cyber Safety Reflection</h3>
+      <p>Write one paragraph about staying safe online.</p>
+    </div>
+    <div class="due">Due Tomorrow</div>
+  </div>
+
+  <div class="upload-zone">
+    <div class="big">📄</div>
+    <h4>Upload your file</h4>
+    <p>Accepted formats: PDF, DOCX, or TXT</p>
+    <input id="assignmentFile" type="file">
+  </div>
+
+  <button id="submitAssignment" class="btn">Submit Assignment</button>
+  <div id="assignmentMessage" class="message"></div>
+</article>
+
+</section>
+</main>
+<script src="shared.js"></script>
+<script>requireLogin();
+document.getElementById("submitAssignment").addEventListener("click",()=>{
+  // INTENTIONAL BUG 9:
+  // The assignment submits successfully even if no file is selected.
+  document.getElementById("assignmentMessage").textContent="✅ Assignment submitted successfully!";
+});
+</script>
+</body>
+</html>

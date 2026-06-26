@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Portal | Profile</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    <div class="brand-logo">🐾</div>
+    <div><h1>Panther Portal</h1><p>Bug Hunter Mission</p></div>
+  </a>
+  <div class="top-actions">
+    <div class="status-pill">🔎 Mission Active</div>
+    <a href="#" class="logout" data-logout>Log Out</a>
+  </div>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+  <div class="agent">
+    <div class="agent-avatar">🕵️‍♀️</div>
+    <div><strong>Agent Jordan</strong><span>Junior Bug Hunter</span></div>
+  </div>
+  <div class="nav-title">MISSION PAGES</div>
+  <nav class="nav">
+    <a href="dashboard.html" class=""><span>🏠</span>Mission Home</a>
+    <a href="profile.html" class="active"><span>👤</span>My Profile</a>
+    <a href="clubs.html" class=""><span>🎨</span>Clubs</a>
+    <a href="assignments.html" class=""><span>📚</span>Assignments</a>
+    <a href="teacher.html" class="teacher "><span>🔒</span>Teacher Zone</a>
+  </nav>
+  <div class="tip">💡 A strong bug report explains exactly what happened and how to repeat it.</div>
+</aside>
+
+<section class="content">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">ACCOUNT AREA</div>
+    <h2>My Profile 👤</h2>
+    <p>Review your student information and test the profile controls.</p>
+  </div>
+  <div class="hero-art">🪪</div>
+</section>
+
+<h3 class="section-title">Profile details</h3>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-icon">🪪</div>
+      <div><h3>Student information</h3><p>Visible account details</p></div>
+    </div>
+    <div class="info-list">
+      <div class="info-row"><span>Full name</span><strong>Jordan Lee</strong></div>
+      <div class="info-row"><span>Email</span><strong>jordan.lee@example.edu</strong></div>
+      <div class="info-row"><span>Home address</span><strong>123 Practice Street</strong></div>
+      <div class="info-row"><span>Parent phone</span><strong>555-0104</strong></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-icon">✏️</div>
+      <div><h3>Edit profile</h3><p>Change your display name</p></div>
+    </div>
+
+    <label for="displayName">Display name</label>
+    <input id="displayName" value="Jordan">
+
+    <div class="button-row">
+      <button id="saveProfile" class="btn">Save Changes</button>
+      <button id="cancelProfile" class="btn-secondary">Cancel</button>
+    </div>
+    <div id="profileMessage" class="message"></div>
+  </div>
+</div>
+
+</section>
+</main>
+<script src="shared.js"></script>
+<script>requireLogin();
+document.getElementById("saveProfile").addEventListener("click",()=>{
+  // INTENTIONAL BUG 6:
+  // A success message appears, but the new name is never stored.
+  document.getElementById("profileMessage").textContent="✅ Profile updated successfully.";
+});
+document.getElementById("cancelProfile").addEventListener("click",()=>{
+  document.getElementById("displayName").value="Jordan";
+  document.getElementById("profileMessage").textContent="";
+});
+</script>
+</body>
+</html>

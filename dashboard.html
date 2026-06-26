@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panther Portal | Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="dashboard.html" class="brand">
+    <div class="brand-logo">🐾</div>
+    <div><h1>Panther Portal</h1><p>Bug Hunter Mission</p></div>
+  </a>
+  <div class="top-actions">
+    <div class="status-pill">🔎 Mission Active</div>
+    <a href="#" class="logout" data-logout>Log Out</a>
+  </div>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+  <div class="agent">
+    <div class="agent-avatar">🕵️‍♀️</div>
+    <div><strong>Agent Jordan</strong><span>Junior Bug Hunter</span></div>
+  </div>
+  <div class="nav-title">MISSION PAGES</div>
+  <nav class="nav">
+    <a href="dashboard.html" class="active"><span>🏠</span>Mission Home</a>
+    <a href="profile.html" class=""><span>👤</span>My Profile</a>
+    <a href="clubs.html" class=""><span>🎨</span>Clubs</a>
+    <a href="assignments.html" class=""><span>📚</span>Assignments</a>
+    <a href="teacher.html" class="teacher "><span>🔒</span>Teacher Zone</a>
+  </nav>
+  <div class="tip">💡 A strong bug report explains exactly what happened and how to repeat it.</div>
+</aside>
+
+<section class="content">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">TODAY'S MISSION</div>
+    <h2>Welcome back, Jordan! 👋</h2>
+    <p>Explore carefully. Some bugs are easy to notice, while others require testing the features.</p>
+  </div>
+  <div class="hero-art">🔍</div>
+</section>
+
+<h3 class="section-title">Mission status</h3>
+<div class="grid-3">
+  <div class="card stat card-hover"><div class="stat-icon">🎯</div><div><strong>5</strong><span>Pages to test</span></div></div>
+  <div class="card stat card-hover"><div class="stat-icon">🐞</div><div><strong>10</strong><span>Real bugs hidden</span></div></div>
+  <div class="card stat card-hover"><div class="stat-icon">🏆</div><div><strong>11</strong><span>Points per report</span></div></div>
+</div>
+
+<h3 class="section-title">Your dashboard</h3>
+<div class="grid-3">
+  <article class="card mission-card purple card-hover">
+    <div class="mission-icon">📚</div>
+    <div>
+      <span class="tag">UPCOMING</span>
+      <h3>Cyber Safety Reflection</h3>
+      <p>Due tomorrow at 3:00 PM</p>
+      <a class="link-btn" href="clubs.html">Open Assignment →</a>
+    </div>
+  </article>
+
+  <article class="card mission-card yellow card-hover">
+    <div class="mission-icon">📣</div>
+    <div>
+      <span class="tag">ANNOUNCEMENT</span>
+      <h3>Spirit Day</h3>
+      <p>Get ready for Friday, February 30!</p>
+    </div>
+  </article>
+
+  <article class="card mission-card low-contrast card-hover">
+    <div class="mission-icon">👀</div>
+    <div>
+      <span class="tag">NOTICE</span>
+      <h3>Accessibility Update</h3>
+      <p>This message may be difficult to read.</p>
+    </div>
+  </article>
+</div>
+
+</section>
+</main>
+<script src="shared.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>
