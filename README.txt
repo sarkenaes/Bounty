@@ -1,13 +1,17 @@
-PANTHER PORTAL — 10 REAL BUGS
+#  Bug Hunt
 
-HOW TO RUN
-1. Extract the ZIP file.
-2. Keep all files in the same folder.
-3. Open index.html.
-4. No server or internet connection is required.
+An intentionally vulnerable educational website created for a CybHER middle-school lesson on software bugs, website testing, and responsible reporting.
 
-PRACTICE LOGIN
-Username: student01
-Password: panther
+Students explore the site, identify intentional functional, validation, accessibility, and security issues and compare expected behavior with actual behavior.
 
-This site contains exactly 10 intentional bugs for a classroom activity.
+## Technologies
+
+HTML, CSS, and JavaScript.
+
+## Practice Login
+
+Username: `student01`
+Password: `panther`
+
+> This project is for authorized classroom use only and is not intended for production.
+
