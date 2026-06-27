@@ -13,5 +13,4 @@ HTML, CSS, and JavaScript.
 Username: `student01`
 Password: `panther`
 
-> This project is for authorized classroom use only and is not intended for production.
 
