@@ -1,4 +1,4 @@
-#  Bug Hunt
+## Bug Hunt
 
 An intentionally vulnerable educational website created for a CybHER middle-school lesson on software bugs, website testing, and responsible reporting.
 
